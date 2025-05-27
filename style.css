@@ -1,129 +1,57 @@
-body {
-    background-image: url('background.png'); /* zorg dat het pad klopt */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-image: url('background.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    color: white;
     font-family: 'Arial', sans-serif;
-  }
-
-  header {
-    background-color: #4b00e0;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: white;
   }
+  
   .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: transparent;
     padding: 10px 20px;
-
+    background-color: rgba(0, 0, 0, 0.6); 
   }
   
   .navbar-left .logo {
     height: 150px;
     width: auto;
-
   }
+  
   .navbar-menu {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-menu li {
-    margin: 0 10px;
+    gap: 20px;
   }
   
   .navbar-menu a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
     transition: color 0.3s ease;
-    
   }
+  
   .navbar-menu a:hover {
-    color: #4b00e0; 
+    color: #4b00e0;
   }
   
-  nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: x-large;
- 
-  nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 0.5rem;
-      }
-      
-  }
-  
-  .breadcrumb {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: white;
-  }
-  main {
-    padding: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .buttons {
-    margin-top: 2rem;
-
-  }
-  .button {
-    background-color: #4b00e0;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    margin: 1rem 1rem 0 0;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-
-  }
-  .button:hover {
-    background-color: #3700b3; /* donkerder paars */
-    color: #ffffff;
-  }
-
-  h2 {
-    font-size: 48px;
-    color:#ffffff;
-    text-align: center;
-  }
-  
-  h3 {
-    font-size: 40px;
-    color:#ffffff;
-    text-align: center;
-  }
-  h4 {
-    font-size: 20px;
-    color:#ffffff;
-    max-width: 700px;
-    text-align: center; 
-    margin: 0 auto;
-  }
   .hero-section {
     text-align: center;
     padding: 100px 20px;
-    color: white;
-    font-family: 'Arial', sans-serif;
     position: relative;
   }
   
@@ -137,9 +65,6 @@ body {
     margin-bottom: 40px;
   }
   
-html {
-    scroll-behavior: smooth;
-  }
   .mouse {
     width: 35px;
     height: 60px;
@@ -161,6 +86,12 @@ html {
     animation: scroll 1.5s infinite;
   }
   
+  @keyframes scroll {
+    0% { top: 10px; opacity: 1; }
+    50% { top: 25px; opacity: 0.5; }
+    100% { top: 10px; opacity: 1; }
+  }
+  
   .rollshadow {
     position: absolute;
     top: 46px;
@@ -172,17 +103,42 @@ html {
     border-radius: 50%;
   }
   
-  @keyframes scroll {
-    0% {
-      opacity: 1;
-      top: 10px;
-    }
-    100% {
-      opacity: 0;
-      top: 30px;
-    }
+  main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
   }
-  .scroll-down {
-    display: inline-block;
+  
+  h2 {
+    font-size: 48px;
+  }
+  
+  h3 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 1rem auto;
+    line-height: 1.6;
+  }
+
+  .button {
+    background-color: #4b00e0;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    font-size: 1rem;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
+  
+  .button:hover {
+    background-color: #3700b3;
+  }
+  

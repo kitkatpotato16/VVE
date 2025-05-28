@@ -1,144 +1,171 @@
-
+/* Algemene instellingen */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    background-image: url('background.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: 'Arial', sans-serif;
-    color: white;
-  }
-  
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.6); 
-  }
-  
-  .navbar-left .logo {
-    height: 150px;
-    width: auto;
-  }
-  
-  .navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 30px;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-menu a:hover {
-    color: #4b00e0;
-  }
-  
-  .hero-section {
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-  }
-  
-  .hero-section h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-  
-  .hero-section p {
-    font-size: 24px;
-    margin-bottom: 40px;
-  }
-  
-  .mouse {
-    width: 35px;
-    height: 60px;
-    border: 2px solid white;
-    border-radius: 25px;
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  .roll {
-    width: 6px;
-    height: 6px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: scroll 1.5s infinite;
-  }
-  
-  @keyframes scroll {
-    0% { top: 10px; opacity: 1; }
-    50% { top: 25px; opacity: 0.5; }
-    100% { top: 10px; opacity: 1; }
-  }
-  
-  .rollshadow {
-    position: absolute;
-    top: 46px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 6px;
-    height: 6px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 50%;
-  }
-  
-  main {
-    padding: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  h2 {
-    font-size: 48px;
-  }
-  
-  h3 {
-    font-size: 40px;
-    margin-bottom: 1rem;
-  }
-  
-  h4 {
-    font-size: 20px;
-    max-width: 700px;
-    margin: 1rem auto;
-    line-height: 1.6;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .button {
-    background-color: #4b00e0;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    margin: 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #3700b3;
-  }
-  
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+/* Navigatiebalk */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px; /* kleiner gemaakt */
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar-left .logo {
+  height: 80px; /* kleiner gemaakt */
+  width: auto;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #4b00e0;
+}
+
+/* Hero-sectie */
+.hero-section {
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.mouse {
+  width: 35px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 25px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.roll {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% { top: 10px; opacity: 1; }
+  50% { top: 25px; opacity: 0.5; }
+  100% { top: 10px; opacity: 1; }
+}
+
+.rollshadow {
+  position: absolute;
+  top: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+/* Main content algemeen */
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 48px;
+}
+
+main h3 {
+  font-size: 22px;
+  margin-bottom: 1.5rem;
+}
+
+main h4 {
+  font-size: 16px;
+  max-width: 800px;
+  margin: 1rem auto;
+  line-height: 1.8;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Dienstverlening sectie */
+.dienstverlening {
+  background-color: white;
+  color: #002f3c;
+  padding: 60px 20px 100px 20px;
+  margin-top: 300px; 
+}
+
+.dienstverlening-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: left;
+}
+
+.dienstverlening-tekst {
+  text-align: left;            
+  max-width: 700px;
+  margin-left: 60px;         
+  margin-right: auto;
+  font-size: small;
+}
+
+
+.dienstverlening-tekst h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #002f3c;
+}
+
+.dienstverlening-tekst p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #002f3c;
+}
+

@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: floralwhite; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    color: white;
+  }
+
+.navbar {    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+  .navbar-left .logo {
+    height: 150px;
+    width: auto;
+  }
+  
+  .hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+  }
+  
+  .hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-section p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .mouse {
+    width: 35px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin: 0 auto;
+    position: relative;
+  }

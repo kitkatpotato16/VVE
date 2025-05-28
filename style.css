@@ -142,30 +142,114 @@ main h4 {
 }
 
 .dienstverlening-container {
-  display: flex;
+  max-width: 1200px;
   margin: 0 auto;
-  justify-content: left;
+  padding: 40px 20px;
+}
+
+.dienstverlening-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
 }
 
 .dienstverlening-tekst {
-  text-align: left;            
-  max-width: 700px;
-  margin-left: 60px;         
-  margin-right: auto;
-  font-size: small;
+  flex: 1;
+  min-width: 300px;
+  font-size: large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.dienstverlening-afbeelding {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 12px;
+}
+  .dienstverlening-afbeelding img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
 
-.dienstverlening-tekst h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #002f3c;
+
+.footer {
+  background-color: #050094; /* donkerblauw */
+  color: #eaf4ff;            /* zacht lichtblauw */
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
 }
 
-.dienstverlening-tekst p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  color: #002f3c;
+.footer-top-border {
+  height: 20px;
+  background: repeating-linear-gradient(
+    45deg,
+    #050094,
+    #050094 20px,
+    #050094 20px,
+    #050094 40px
+  );
 }
 
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  margin: 20px;
+}
+
+.footer-column h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #eaf4ff;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-top: 15px;
+}
+
+.bvvb-logo {
+  width: 80px;
+  margin-top: 15px;
+}
+
+.certificering {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #eaf4ff33;
+}
+
+.footer-bottom a {
+  color: #eaf4ff;
+}

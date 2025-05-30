@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+<link rel="stylesheet" href="../css/login.css">
+
+</head>
+<body>
+
+  <!-- Navigatiebalk -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="../Images/logo.png" alt="Logo" class="logo" />
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="VvE.html">VvE</a></li>
+      <li><a href="Servicedesk.html">Servicedesk</a></li>
+      <li><a href="Team.html">Team</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+<form id="loginForm">
+  <input type="email" id="email" name="email" placeholder="Email" required>
+  <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
+  <button type="submit">Login</button>
+</form>
+
+<div id="error" style="display:none; color: red; margin-top: 10px;"></div>
+
+
+<p class="register-link">
+  Don't have an account? <a href="register.html">Register here</a>
+</p>
+
+<div id="error" style="display:none; color: red; margin-top: 10px;"></div>
+
+
+    <div class="back-button">
+      <a href="index.html">← Terug naar home</a>
+    </div>
+  </div>
+</body>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const errorDiv = document.getElementById("error");
+
+  const response = await fetch("../php/login_process.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+  });
+
+  const result = await response.json();
+
+  if (result.success) {
+    window.location.href = "dashboard.html"; // of een andere pagina
+  } else {
+    errorDiv.textContent = result.message;
+    errorDiv.style.display = "block";
+  }
+});
+</script>
+

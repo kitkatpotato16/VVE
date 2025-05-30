@@ -26,11 +26,11 @@
 
   <div class="login-container">
     <h2>Welcome Back</h2>
-<form id="loginForm">
-  <input type="email" id="email" name="email" placeholder="Email" required>
-  <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
+<form action="php/login_process.php" method="post">
+  <input type="text" name="username" placeholder="Gebruikersnaam" required>
+   <input type="email" name="email" placeholder="Email" required />
+  <input type="password" name="password" placeholder="Wachtwoord" required>
   <button type="submit">Login</button>
-</form>
 
 <div id="error" style="display:none; color: red; margin-top: 10px;"></div>
 

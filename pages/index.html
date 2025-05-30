@@ -22,6 +22,20 @@
       <li><a href="Login.html">Login</a></li>
     </ul>
   </nav>
+<div id="login-status" style="color: white; padding: 10px;"></div>
+
+<script>
+  fetch('php/check_login.php')
+    .then(response => response.json())
+    .then(data => {
+      const loginDiv = document.getElementById('login-status');
+      if (data.loggedin) {
+        loginDiv.textContent = `✅ Ingelogd als ${data.email}`;
+      } else {
+        loginDiv.textContent = `🔒 Niet ingelogd`;
+      }
+    });
+</script>
 
   <!-- Hero Sectie -->
   <section class="hero-section">

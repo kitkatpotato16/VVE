@@ -24,11 +24,14 @@
 
   <div class="login-container">
     <h2>Welcome Back</h2>
-<form id="loginForm">
-  <input type="email" id="email" name="email" placeholder="Email" required>
-  <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
-  <button type="submit">Registreer</button>
+<form action="../php/register_process.php" method="POST">
+  <input type="text" name="username" placeholder="Gebruikersnaam" required><br>
+  <input type="email" name="email" placeholder="Email" required><br>
+  <input type="password" name="password" placeholder="Wachtwoord" required><br>
+  <button type="submit">Register</button>
 </form>
+
+
 
 <div id="error" style="display:none; color: red; margin-top: 10px;"></div>
 

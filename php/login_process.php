@@ -1,39 +1,31 @@
 <?php
 require 'config.php';
+session_start();
 
-header('Content-Type: application/json');
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['password'] ?? '';
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo json_encode(['success' => false, 'message' => 'Voer een geldig e-mailadres in.']);
-        exit;
-    }
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
 
-    if (strlen($password) < 6) {
-        echo json_encode(['success' => false, 'message' => 'Wachtwoord moet minimaal 6 tekens lang zijn.']);
-        exit;
-    }
-
-    // Check of e-mail al bestaat
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
-    $stmt->execute([$email]);
-
-    if ($stmt->rowCount() > 0) {
-        echo json_encode(['success' => false, 'message' => 'Dit e-mailadres is al geregistreerd.']);
-        exit;
-    }
-
-    // Hash het wachtwoord en sla op
-    $hashed = password_hash($password, PASSWORD_DEFAULT);
-    $stmt = $pdo->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
-
-    if ($stmt->execute([$email, $hashed])) {
-        echo json_encode(['success' => true]);
+        if (password_verify($password, $user["password"])) {
+            $_SESSION["loggedin"] = true;
+            $_SESSION["username"] = $user["username"];
+            header("Location: ../index.html?login=success");
+            exit();
+        } else {
+            header("Location: ../login.html?error=wrong_password");
+            exit();
+        }
     } else {
-        echo json_encode(['success' => false, 'message' => 'Registratie mislukt.']);
+        header("Location: ../login.html?error=user_not_found");
+        exit();
     }
 }
 ?>

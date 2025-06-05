@@ -1,0 +1,256 @@
+/* Algemene instellingen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-image: url('../Images/background.png');
+    height: 1000px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    color: white;
+  }
+  
+  /* Navigatiebalk */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px; /* kleiner gemaakt */
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .navbar-left .logo {
+    height: 80px; /* kleiner gemaakt */
+    width: auto;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-menu a:hover {
+    color: #4b00e0;
+  }
+  
+  /* Hero-sectie */
+  .hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+  }
+  
+  .hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-section p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .mouse {
+    width: 35px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .roll {
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1.5s infinite;
+  }
+  
+  @keyframes scroll {
+    0% { top: 10px; opacity: 1; }
+    50% { top: 25px; opacity: 0.5; }
+    100% { top: 10px; opacity: 1; }
+  }
+  
+  .rollshadow {
+    position: absolute;
+    top: 46px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+  }
+  
+  /* Main content algemeen */
+  main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  main h2 {
+    font-size: 48px;
+  }
+  
+  main h3 {
+    font-size: 22px;
+    margin-bottom: 1.5rem;
+  }
+  
+  main h4 {
+    font-size: 16px;
+    max-width: 800px;
+    margin: 1rem auto;
+    line-height: 1.8;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Dienstverlening sectie */
+  .dienstverlening {
+    background-color: white;
+    color: #002f3c;
+    padding: 60px 20px 100px 20px;
+    margin-top: 300px; 
+  }
+  
+  .dienstverlening-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .dienstverlening-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  
+  .dienstverlening-tekst {
+    flex: 1;
+    min-width: 300px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .dienstverlening-afbeelding {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    border-radius: 12px;
+  }
+    .dienstverlening-afbeelding img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  
+  
+  .footer {
+    background-color: #050094; /* donkerblauw */
+    color: #eaf4ff;            /* zacht lichtblauw */
+    padding: 40px 20px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-top-border {
+    height: 20px;
+    background: repeating-linear-gradient(
+      45deg,
+      #050094,
+      #050094 20px,
+      #050094 20px,
+      #050094 40px
+    );
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+  }
+  
+  .footer-column {
+    flex: 1 1 250px;
+    margin: 20px;
+  }
+  
+  .footer-column h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column p,
+  .footer-column a {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #eaf4ff;
+    text-decoration: none;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-logo {
+    width: 140px;
+    margin-top: 15px;
+  }
+  
+  .bvvb-logo {
+    width: 80px;
+    margin-top: 15px;
+  }
+  
+  .certificering {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #eaf4ff33;
+  }
+  
+  .footer-bottom a {
+    color: #eaf4ff;
+  }

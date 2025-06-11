@@ -16,7 +16,7 @@
     background-position: center;
     background-repeat: no-repeat;
     font-family: 'Arial', sans-serif;
-    color: white;
+    color: #ffffff;
   }
   
   /* Navigatiebalk */
@@ -55,6 +55,7 @@
   .hero-section {
     text-align: center;
     padding: 100px 20px;
+    margin-top: 20px; 
     position: relative;
   }
   
@@ -139,7 +140,12 @@
     background-color: white;
     color: #002f3c;
     padding: 60px 20px 100px 20px;
-    margin-top: 300px; 
+    margin-top: 20px; 
+  }
+  .dienstverlening2{
+    background-color: white;
+    color: #002f3c;
+    padding: 60px 20px 100px 20px;
   }
   
   .dienstverlening-container {
@@ -164,7 +170,7 @@
   
   .dienstverlening-afbeelding {
     flex: 1;
-    min-width: 300px;
+    min-width: 500px;
     max-width: 500px;
     border-radius: 12px;
   }

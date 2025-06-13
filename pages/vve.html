@@ -104,6 +104,27 @@
     prevSlide();
     resetTimer();
   });
+   dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      slideIndex = i;
+      showSlide(slideIndex);
+      resetTimer();
+    });
+  });
+
+  // Auto slideshow
+  let timer = setInterval(nextSlide, 5000); // 5 seconden
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(nextSlide, 5000);
+  }
+
+  // Initialiseer
+  showSlide(slideIndex);
+</script>
+
+
 
 
 <footer class="footer">

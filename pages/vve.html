@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VVE</title>
+    <link rel="stylesheet" href="../css/vve.css">
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<body>
+    
+</body>
+</html>
+<body>
+  <!-- Navigatiebalk -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="../Images/Logo_wit.png" alt="Logo" class="logo" />
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="VvE.html">VvE</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Login.html">Login</a></li>
+    </ul>
+  </nav>
+<div id="login-status" style="color: white; padding: 10px;"></div>
+
+<script>
+  fetch('php/check_login.php')
+    .then(response => response.json())
+    .then(data => {
+      const loginDiv = document.getElementById('login-status');
+      if (data.loggedin) {
+        loginDiv.textContent = `✅ Ingelogd als ${data.email}`;
+      } else {
+        loginDiv.textContent = `🔒 Niet ingelogd`;
+      }
+    });
+</script>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; margin: 0; background: #f0f0f0; }
+  .slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .slides {
+    display: none;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  /* Pijltjes */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.4);
+    user-select: none;
+    transform: translateY(-50%);
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.7);
+  }
+  .prev { left: 15px; }
+  .next { right: 15px; }
+
+  /* Dots onderaan */
+  .dots-container {
+    text-align: center;
+    padding: 10px 0;
+    background: #fff;
+  }
+  .dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  .dot.active {
+    background-color: #717171;
+  }
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+  <div class="slides fade">
+    <img src="../Images/dakdekker.png" alt="Slide 1" />
+  </div>
+
+  <div class="slides fade">
+    <img src="../Images/loodgieter.png" alt="Slide 2" />
+  </div>
+
+  <div class="slides fade">
+    <img src="https://picsum.photos/id/1018/600/400" alt="Slide 3" />
+  </div>
+
+  <!-- Pijltjes -->
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+
+<div class="dots-container">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slides");
+  const dots = document.querySelectorAll(".dot");
+  const prev = document.querySelector(".prev");
+  const next = document.querySelector(".next");
+
+  function showSlide(n) {
+    if (n >= slides.length) slideIndex = 0;
+    if (n < 0) slideIndex = slides.length - 1;
+
+    slides.forEach(slide => slide.style.display = "none");
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[slideIndex].style.display = "block";
+    dots[slideIndex].classList.add("active");
+  }
+
+  function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+  }
+
+  function prevSlide() {
+    slideIndex--;
+    showSlide(slideIndex);
+  }
+
+  // Klik events voor pijltjes
+  next.addEventListener("click", () => {
+    nextSlide();
+    resetTimer();
+  });
+  prev.addEventListener("click", () => {
+    prevSlide();
+    resetTimer();
+  });
+
+
+<footer class="footer">
+  <div class="footer-top-border"></div>
+
+  <div class="footer-container">
+    <!-- Linkerkolom: Naam en logo -->
+    <div class="footer-column logo-col">
+      <h2>VvE Diensten Limburg</h2>
+      <p>vve beheer</p>
+      <img src="../Images/Logo_wit.png" alt="VvE Logo" class="footer-logo" />
+    </div>
+
+    
+    <div class="footer-column contact-col">
+      <strong>Ons team</strong><br />
+      Einighauserweg 19<br />
+      6143 BN Guttecoven<br /><br />
+      06 41 643 770
+    </div>
+
+   
+    <div class="footer-column links-col">
+      <a href="#">Algemene voorwaarden</a><br />
+      <a href="#">Debiteurenbeleid</a><br />
+      <a href="#">Beloningsbeleid</a><br />
+      <a href="#">BVVB Dienstenwijzer</a><br />
+      <a href="#">Klachtenprocedure</a><br />
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 VvE Diensten Limburg</p>
+    <p><a href="#">Cookieverklaring</a> | <a href="#">Privacyverklaring</a></p>
+  </div>
+</footer>
+

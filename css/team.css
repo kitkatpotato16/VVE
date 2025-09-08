@@ -173,11 +173,12 @@
     min-width: 500px;
     max-width: 500px;
     border-radius: 12px;
+    margin-top: 20px;
   }
     .dienstverlening-afbeelding img {
       max-width: 100%;
       height: auto;
-      border-radius: 12px;
+      border-radius: auto;
     }
   
   

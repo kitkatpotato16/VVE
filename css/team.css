@@ -33,7 +33,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 5px;
+  padding: 5px 50px;
   /* kleiner gemaakt */
   background-color: rgba(3, 28, 118, 0.6);
 }

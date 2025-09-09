@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact</title>
-<link rel="stylesheet" href="../css/team.css">
+  <link rel="stylesheet" href="../css/team.css">
 </head>
 
 <body>
@@ -21,81 +22,83 @@
       <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
-<div id="login-status" style="color: white; padding: 10px;"></div>
+  <div id="login-status" style="color: white; padding: 10px;"></div>
 
-<script>
-  fetch('php/check_login.php')
-    .then(response => response.json())
-    .then(data => {
-      const loginDiv = document.getElementById('login-status');
-      if (data.loggedin) {
-        loginDiv.textContent = `✅ Ingelogd als ${data.email}`;
-      } else {
-        loginDiv.textContent = `🔒 Niet ingelogd`;
-      }
-    });
-</script>
+  <script>
+    fetch('php/check_login.php')
+      .then(response => response.json())
+      .then(data => {
+        const loginDiv = document.getElementById('login-status');
+        if (data.loggedin) {
+          loginDiv.textContent = `✅ Ingelogd als ${data.email}`;
+        } else {
+          loginDiv.textContent = `🔒 Niet ingelogd`;
+        }
+      });
+  </script>
 
   <!-- Hero Sectie -->
   <section class="hero-section">
-    <h1>Ons Team</h1>
+    <nav class="navbar2">
+      <div class="navbar-left">
+        <h1>Ons Team</h1>
   </section>
 
-<!-- Dienstverlening Sectie -->
-<section class="dienstverlening">
-  <div class="dienstverlening-container">
-    <div class="dienstverlening-content">
+  <!-- Dienstverlening Sectie -->
+  <section class="dienstverlening">
+    <div class="dienstverlening-container">
+      <div class="dienstverlening-content">
 
-      <!-- Tekstkolom -->
-      <div class="dienstverlening-tekst">
-        <h2>Peter Dost</h2><br>
-        <p>
-          Functie
-        </p>
+        <!-- Tekstkolom -->
+        <div class="dienstverlening-tekst">
+          <h2>Peter Dost</h2><br>
+          <p>
+            Functie:
+            <i>Eigenaar en Directeur</i>
+          </p>
+        </div>
+
+        <!-- Afbeeldingkolom -->
+        <div class="dienstverlening-afbeelding">
+          <img src="../Images/default_pfp.jpg" alt="Placeholder" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-top-border"></div>
+
+    <div class="footer-container">
+      <!-- Linkerkolom: Naam en logo -->
+      <div class="footer-column logo-col">
+        <h2>VvE Diensten Limburg</h2>
+        <p>vve beheer</p>
+        <img src="../Images/Logo_wit.png" alt="VvE Logo" class="footer-logo" />
       </div>
 
-      <!-- Afbeeldingkolom -->
-      <div class="dienstverlening-afbeelding">
-        <img src="../Images/default_pfp.jpg" alt="Placeholder" />
+      <!-- Middenkolom: Adres en contact -->
+      <div class="footer-column contact-col">
+        <strong>Ons team</strong><br />
+        Einighauserweg 19<br />
+        6143 BN Guttecoven<br /><br />
+        06 41 643 770
       </div>
 
-    </div>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="footer-top-border"></div>
-
-  <div class="footer-container">
-    <!-- Linkerkolom: Naam en logo -->
-    <div class="footer-column logo-col">
-      <h2>VvE Diensten Limburg</h2>
-      <p>vve beheer</p>
-      <img src="../Images/Logo_wit.png" alt="VvE Logo" class="footer-logo" />
+      <!-- Rechterkolom: Links en certificering -->
+      <div class="footer-column links-col">
+        <a href="#">Algemene voorwaarden</a><br />
+        <a href="#">Debiteurenbeleid</a><br />
+        <a href="#">Beloningsbeleid</a><br />
+        <a href="#">BVVB Dienstenwijzer</a><br />
+        <a href="#">Klachtenprocedure</a><br />
+      </div>
     </div>
 
-    <!-- Middenkolom: Adres en contact -->
-    <div class="footer-column contact-col">
-      <strong>Ons team</strong><br />
-      Einighauserweg 19<br />
-      6143 BN Guttecoven<br /><br />
-      06 41 643 770
+    <div class="footer-bottom">
+      <p>&copy; 2025 VvE Diensten Limburg</p>
+      <p><a href="#">Cookieverklaring</a> | <a href="#">Privacyverklaring</a></p>
     </div>
-
-    <!-- Rechterkolom: Links en certificering -->
-    <div class="footer-column links-col">
-      <a href="#">Algemene voorwaarden</a><br />
-      <a href="#">Debiteurenbeleid</a><br />
-      <a href="#">Beloningsbeleid</a><br />
-      <a href="#">BVVB Dienstenwijzer</a><br />
-      <a href="#">Klachtenprocedure</a><br />
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 VvE Diensten Limburg</p>
-    <p><a href="#">Cookieverklaring</a> | <a href="#">Privacyverklaring</a></p>
-  </div>
-</footer>
-
+  </footer>

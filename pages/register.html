@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registreren</title>
   <link rel="stylesheet" href="../css/register.css" />
 </head>
+
 <body>
-    <!-- Navigatiebalk -->
+  <!-- Navigatiebalk -->
   <nav class="navbar">
     <div class="navbar-left">
       <img src="../Images/Logo_wit.png" alt="Logo" class="logo" />
@@ -23,51 +25,53 @@
 
   <div class="login-container">
     <h2>Welcome Back</h2>
-<form action="../php/register_process.php" method="POST">
-  <input type="text" name="username" placeholder="Gebruikersnaam" required><br>
-  <input type="email" name="email" placeholder="Email" required><br>
-  <input type="password" name="password" placeholder="Wachtwoord" required><br>
-  <button type="submit">Register</button>
-</form>
+    <form action="../php/register_process.php" method="POST">
+      <input type="text" name="username" placeholder="Gebruikersnaam" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="password" name="password" placeholder="Wachtwoord" required><br>
+      <button type="submit">Register</button>
+    </form>
 
 
 
-<div id="error" style="display:none; color: red; margin-top: 10px;"></div>
+    <div id="error" style="display:none; color: red; margin-top: 10px;"></div>
 
 
-  <script>
-    document.getElementById("registerForm").addEventListener("submit", async function (e) {
-      e.preventDefault();
+    <script>
+      document.getElementById("registerForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-      const messageBox = document.getElementById("messageBox");
+        const text = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const messageBox = document.getElementById("messageBox");
 
-      const response = await fetch("register_process.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+        const response = await fetch("register_process.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          messageBox.textContent = "Registratie gelukt! Je kunt nu inloggen.";
+          messageBox.className = "message success";
+          messageBox.style.display = "block";
+          document.getElementById("registerForm").reset();
+        } else {
+          messageBox.textContent = result.message;
+          messageBox.className = "message";
+          messageBox.style.display = "block";
+        }
       });
-
-      const result = await response.json();
-
-      if (result.success) {
-        messageBox.textContent = "Registratie gelukt! Je kunt nu inloggen.";
-        messageBox.className = "message success";
-        messageBox.style.display = "block";
-        document.getElementById("registerForm").reset();
-      } else {
-        messageBox.textContent = result.message;
-        messageBox.className = "message";
-        messageBox.style.display = "block";
-      }
-    });
-  </script>
-  <div class="back-button">
+    </script>
+    <div class="back-button">
       <a href="login.html">← Terug naar login</a>
     </div>
   </div>
 </body>
+
 </html>

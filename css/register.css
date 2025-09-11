@@ -10,7 +10,7 @@ body {
 /* Achtergrond */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: url('../Images/background.png') no-repeat center center fixed;
+  background: url('../Images/wallpaperbetter.com_2100x1313.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -83,6 +83,7 @@ body {
   color: #000;
 }
 
+.login-container input[type="text"],
 .login-container input[type="email"],
 .login-container input[type="password"] {
   width: 100%;

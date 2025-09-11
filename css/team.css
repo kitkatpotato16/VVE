@@ -31,10 +31,9 @@ body {
 
 .navbar2 {
   display: flex;
-  align-items: center;
   justify-content: center;
-  -ms-flex-align: center;
-  width: 50%;
+  align-items: center;
+  width: 40%;
   padding: 5px 50px;
   /* kleiner gemaakt */
   background-color: rgba(3, 28, 118, 0.6);
@@ -73,7 +72,8 @@ body {
   padding: 100px 20px;
   margin-top: 20px;
   position: relative;
-
+  display: flex;
+  justify-content: center;
 }
 
 .hero-section h1 {

@@ -33,16 +33,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50%;
   padding: 5px 50px;
   /* kleiner gemaakt */
   background-color: rgba(3, 28, 118, 0.6);
+
 }
 
 
 .navbar-left .logo {
   height: 80px;
   /* kleiner gemaakt */
-  width: auto;
+  width: 100%;
+  -ms-flex-item-align: center;
+
 }
 
 .navbar-menu {

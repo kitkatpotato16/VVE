@@ -1,5 +1,6 @@
 /* Zorg dat de hele pagina geen scroll vertoont */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -15,7 +16,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding-top: 100px; /* ruimte voor navbar */
+  padding-top: 100px;
+  /* ruimte voor navbar */
   box-sizing: border-box;
 }
 
@@ -68,10 +70,11 @@ body {
   background: rgba(255, 255, 255, 0.95);
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   width: 350px;
   text-align: center;
-  max-height: calc(100vh - 120px); /* voorkomt dat het buiten het scherm valt */
+  max-height: calc(100vh - 120px);
+  /* voorkomt dat het buiten het scherm valt */
   overflow-y: auto;
 }
 
@@ -104,7 +107,7 @@ body {
   width: 100%;
   padding: 10px;
   margin-top: 15px;
-  background-color: #e0a800;
+  background-color: #2715b3;
   border: none;
   border-radius: 4px;
   color: #fff;

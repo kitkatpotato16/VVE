@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
-<link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/login.css">
 
 </head>
+
 <body>
 
   <!-- Navigatiebalk -->
@@ -25,52 +27,51 @@
 
   <div class="login-container">
     <h2>Welcome Back</h2>
-<form action="php/login_process.php" method="post">
-  <input type="text" name="username" placeholder="Gebruikersnaam" required>
-   <input type="email" name="email" placeholder="Email" required />
-  <input type="password" name="password" placeholder="Wachtwoord" required>
-  <button type="submit">Login</button>
+    <form action="php/login_process.php" method="post">
+      <input type="text" name="username" placeholder="Gebruikersnaam" required>
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Wachtwoord" required>
+      <button type="submit">Login</button>
 
-<div id="error" style="display:none; color: red; margin-top: 10px;"></div>
-
-
-<p class="register-link">
-  Don't have an account? <a href="register.html">Register here</a>
-</p>
-
-<div id="error" style="display:none; color: red; margin-top: 10px;"></div>
+      <div id="error" style="display:none; color: red; margin-top: 10px;"></div>
 
 
-    <div class="back-button">
-      <a href="index.html">← Terug naar home</a>
-    </div>
+      <p class="register-link">
+        Don't have an account? <a href="register.html">Register here</a>
+      </p>
+
+      <div id="error" style="display:none; color: red; margin-top: 10px;"></div>
+
+
+      <div class="back-button">
+        <a href="index.html">← Terug naar home</a>
+      </div>
   </div>
 </body>
 
 <script>
-document.getElementById("loginForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
+  document.getElementById("loginForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const errorDiv = document.getElementById("error");
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const errorDiv = document.getElementById("error");
 
-  const response = await fetch("../php/login_process.php", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+    const response = await fetch("../php/login_process.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      window.location.href = "dashboard.html"; // of een andere pagina
+    } else {
+      errorDiv.textContent = result.message;
+      errorDiv.style.display = "block";
+    }
   });
-
-  const result = await response.json();
-
-  if (result.success) {
-    window.location.href = "dashboard.html"; // of een andere pagina
-  } else {
-    errorDiv.textContent = result.message;
-    errorDiv.style.display = "block";
-  }
-});
 </script>
-

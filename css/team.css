@@ -165,10 +165,9 @@ main h4 {
 }
 
 .mid_bar {
-  background-color: #b8ccff;
-  /* donkerblauw */
+  background-color: #7099ff;
+  width: 132%;
   color: #eaf4ff;
-  /* zacht lichtblauw */
   padding: 40px 20px 20px;
   font-family: Arial, sans-serif;
 }

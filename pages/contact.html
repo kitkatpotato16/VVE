@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact</title>
-<link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../css/contact.css">
 </head>
 
 <body>
@@ -16,25 +17,25 @@
     <ul class="navbar-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="vve.html">VvE</a></li>
-      <li><a href="team.html">Team</a></li>
+      <li><a href="team.html">Over ons</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
-<div id="login-status" style="color: white; padding: 10px;"></div>
+  <div id="login-status" style="color: white; padding: 10px;"></div>
 
-<script>
-  fetch('php/check_login.php')
-    .then(response => response.json())
-    .then(data => {
-      const loginDiv = document.getElementById('login-status');
-      if (data.loggedin) {
-        loginDiv.textContent = `✅ Ingelogd als ${data.email}`;
-      } else {
-        loginDiv.textContent = `🔒 Niet ingelogd`;
-      }
-    });
-</script>
+  <script>
+    fetch('php/check_login.php')
+      .then(response => response.json())
+      .then(data => {
+        const loginDiv = document.getElementById('login-status');
+        if (data.loggedin) {
+          loginDiv.textContent = `✅ Ingelogd als ${data.email}`;
+        } else {
+          loginDiv.textContent = `🔒 Niet ingelogd`;
+        }
+      });
+  </script>
 
   <!-- Hero Sectie -->
   <section class="hero-section">
@@ -45,65 +46,65 @@
     </div>
   </section>
 
-<!-- Dienstverlening Sectie -->
-<section class="dienstverlening">
-  <div class="dienstverlening-container">
-    <div class="dienstverlening-content">
+  <!-- Dienstverlening Sectie -->
+  <section class="dienstverlening">
+    <div class="dienstverlening-container">
+      <div class="dienstverlening-content">
 
-      <!-- Tekstkolom -->
-      <div class="dienstverlening-tekst">
-        <h2>Contact</h2><br>
-        <p>
-          Bent u op zoek naar een professional met uitstekende service? Neem dan gerust contact op met Peter Dost via telefoonnummer: <br><strong>06 41 643 770</strong>.
-          <br><br>
-        </p>
-        <p>
-          Of mail eens. We maken graag een afspraak om ons voor te stellen en met u mee te denken.
-           U kunt ons bereiken via: <strong>Informatie@VvEDienstenLimburg.com</strong>
-        </p>
+        <!-- Tekstkolom -->
+        <div class="dienstverlening-tekst">
+          <h2>Contact</h2><br>
+          <p>
+            Bent u op zoek naar een professional met uitstekende service? Neem dan gerust contact op met Peter Dost via
+            telefoonnummer: <br><strong>06 41 643 770</strong>.
+            <br><br>
+          </p>
+          <p>
+            Of mail eens. We maken graag een afspraak om ons voor te stellen en met u mee te denken.
+            U kunt ons bereiken via: <strong>Informatie@VvEDienstenLimburg.com</strong>
+          </p>
+        </div>
+
+        <!-- Afbeeldingkolom -->
+        <div class="dienstverlening-afbeelding">
+          <img src="../Images/Contact_ons.jpg" alt="Vergadering VvE" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top-border"></div>
+
+    <div class="footer-container">
+      <!-- Linkerkolom: Naam en logo -->
+      <div class="footer-column logo-col">
+        <h2>VvE Diensten Limburg</h2>
+        <p>vve beheer</p>
+        <img src="../Images/Logo_wit.png" alt="VvE Logo" class="footer-logo" />
       </div>
 
-      <!-- Afbeeldingkolom -->
-      <div class="dienstverlening-afbeelding">
-        <img src="../Images/Contact_ons.jpg" alt="Vergadering VvE" />
+      <!-- Middenkolom: Adres en contact -->
+      <div class="footer-column contact-col">
+        <strong>VvE Diensten Limburg</strong><br />
+        Einighauserweg 19<br />
+        6143 BN Guttecoven<br /><br />
+        06 41 643 770
       </div>
 
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-top-border"></div>
-
-  <div class="footer-container">
-    <!-- Linkerkolom: Naam en logo -->
-    <div class="footer-column logo-col">
-      <h2>VvE Diensten Limburg</h2>
-      <p>vve beheer</p>
-      <img src="../Images/Logo_wit.png" alt="VvE Logo" class="footer-logo" />
+      <!-- Rechterkolom: Links en certificering -->
+      <div class="footer-column links-col">
+        <a href="#">Algemene voorwaarden</a><br />
+        <a href="#">Debiteurenbeleid</a><br />
+        <a href="#">Beloningsbeleid</a><br />
+        <a href="#">BVVB Dienstenwijzer</a><br />
+        <a href="#">Klachtenprocedure</a><br />
+      </div>
     </div>
 
-    <!-- Middenkolom: Adres en contact -->
-    <div class="footer-column contact-col">
-      <strong>VvE Diensten Limburg</strong><br />
-      Einighauserweg 19<br />
-      6143 BN Guttecoven<br /><br />
-      06 41 643 770
+    <div class="footer-bottom">
+      <p>&copy; 2025 VvE Diensten Limburg</p>
+      <p><a href="#">Cookieverklaring</a> | <a href="#">Privacyverklaring</a></p>
     </div>
-
-    <!-- Rechterkolom: Links en certificering -->
-    <div class="footer-column links-col">
-      <a href="#">Algemene voorwaarden</a><br />
-      <a href="#">Debiteurenbeleid</a><br />
-      <a href="#">Beloningsbeleid</a><br />
-      <a href="#">BVVB Dienstenwijzer</a><br />
-      <a href="#">Klachtenprocedure</a><br />
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 VvE Diensten Limburg</p>
-    <p><a href="#">Cookieverklaring</a> | <a href="#">Privacyverklaring</a></p>
-  </div>
-</footer>
-
+  </footer>

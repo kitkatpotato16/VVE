@@ -164,6 +164,15 @@ main h4 {
   font-family: 'Arial', sans-serif;
 }
 
+.mid_bar {
+  background-color: #050094;
+  /* donkerblauw */
+  color: #eaf4ff;
+  /* zacht lichtblauw */
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
 /* Dienstverlening sectie */
 .dienstverlening {
   background-color: white;

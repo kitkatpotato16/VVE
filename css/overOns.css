@@ -30,14 +30,13 @@ body {
 }
 
 .navbar2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 63%;
-  padding: 5px 50px;
+  flex: 1 1 250px;
+  padding-left: 14%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 10px;
   /* kleiner gemaakt */
   background-color: #7098ff9c;
-
 }
 
 
@@ -209,7 +208,7 @@ main h4 {
 .dienstverlening-tekst {
   flex: 1;
   min-width: 300px;
-  font-size: large;
+  font-size: larger;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 

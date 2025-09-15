@@ -170,11 +170,15 @@ main h4 {
   color: #eaf4ff;
   padding: 40px 20px 20px;
   font-family: Arial, sans-serif;
+  
 }
 
 .mid_column {
   flex: 1 1 250px;
   padding-left: 14%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .dienstverlening {
@@ -221,9 +225,8 @@ main h4 {
 .dienstverlening-afbeelding img {
   max-width: 100%;
   height: auto;
-  border-radius: 12pxau;
+  border-radius: 12px;
 }
-
 
 .footer {
   background-color: #050094;

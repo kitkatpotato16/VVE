@@ -168,15 +168,19 @@ main h4 {
   color: #eaf4ff;
   padding: 40px 20px 20px;
   font-family: Arial, sans-serif;
-
 }
 
 .mid_column {
   flex: 1 1 250px;
-  padding-left: 14%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 20px;
+}
+
+.mid_column img{
+  overflow:hidden;
+  justify-content: space-between;
+  margin: auto;
 }
 
 .laptop{

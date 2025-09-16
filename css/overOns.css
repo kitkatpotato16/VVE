@@ -211,7 +211,6 @@ main h4 {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  align-items: flex-start;
 }
 
 .dienstverlening-tekst {

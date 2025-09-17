@@ -163,6 +163,8 @@ main h4 {
 }
 
 .mid_bar {
+  display:flex;
+  justify-content: center;
   background-color: #7099ff;
   width: 100%;
   color: #eaf4ff;

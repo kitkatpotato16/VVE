@@ -311,3 +311,20 @@ main h4 {
 .footer-bottom a {
   color: #eaf4ff;
 }
+
+button{
+  transition-duration: 0.4s;
+  background-color: #7099ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #050094;
+  color: white;
+}

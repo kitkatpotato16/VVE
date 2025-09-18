@@ -30,11 +30,9 @@ body {
 }
 
 .navbar2 {
-  flex: 1 1 250px;
-  padding-left: 14%;
   max-width: 1200px;
+  width: 60%;
   margin: 0 auto;
-  padding: 10px 10px;
   /* kleiner gemaakt */
   background-color: #7098ff9c;
 }
@@ -164,17 +162,13 @@ main h4 {
 
 .mid_bar {
   background-color: #7099ff;
-  width: 100%;
   color: #eaf4ff;
-  padding: 40px 20px 20px;
+  padding: 40px 40px;
   font-family: Arial, sans-serif;
 }
 
 .mid_column {
-  flex: 1 1 250px;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 20px;
 }
 
 .mid_column img {
@@ -184,15 +178,15 @@ main h4 {
 }
 
 .laptop {
-  width: 500px;
+  width: 100%;
   margin-top: 15px;
 }
 
 .dienstverlening {
   background-color: white;
   color: #002f3c;
-  padding: 60px 20px 100px 20px;
   margin-top: 20px;
+  padding: 40px;
 }
 
 .dienstverlening2 {
@@ -201,10 +195,12 @@ main h4 {
   padding: 60px 20px 100px 20px;
 }
 
-.dienstverlening-container {
-  max-width: 1200px;
+.onze-doelen {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  width: 60%;
   margin: 0 auto;
-  padding: 40px 20px;
 }
 
 .dienstverlening-content {
@@ -214,8 +210,8 @@ main h4 {
 }
 
 .dienstverlening-tekst {
-  flex: 1;
-  min-width: 300px;
+  width: 60%;
+  margin: 0 auto;
   font-size: larger;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

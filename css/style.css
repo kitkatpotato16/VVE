@@ -23,12 +23,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 20px; /* kleiner gemaakt */
+  padding: 5px 20px;
+  /* kleiner gemaakt */
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .navbar-left .logo {
-  height: 80px; /* kleiner gemaakt */
+  height: 80px;
+  /* kleiner gemaakt */
   width: auto;
 }
 
@@ -89,9 +91,20 @@ body {
 }
 
 @keyframes scroll {
-  0% { top: 10px; opacity: 1; }
-  50% { top: 25px; opacity: 0.5; }
-  100% { top: 10px; opacity: 1; }
+  0% {
+    top: 10px;
+    opacity: 1;
+  }
+
+  50% {
+    top: 25px;
+    opacity: 0.5;
+  }
+
+  100% {
+    top: 10px;
+    opacity: 1;
+  }
 }
 
 .rollshadow {
@@ -138,7 +151,7 @@ main h4 {
   background-color: white;
   color: #002f3c;
   padding: 60px 20px 100px 20px;
-  margin-top: 300px; 
+  margin-top: 300px;
 }
 
 .dienstverlening-container {
@@ -167,29 +180,31 @@ main h4 {
   max-width: 500px;
   border-radius: 12px;
 }
-  .dienstverlening-afbeelding img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-  }
+
+.dienstverlening-afbeelding img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
 
 
 .footer {
-  background-color: #050094; /* donkerblauw */
-  color: #eaf4ff;            /* zacht lichtblauw */
+  background-color: #050094;
+  /* donkerblauw */
+  color: #eaf4ff;
+  /* zacht lichtblauw */
   padding: 40px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
 .footer-top-border {
   height: 20px;
-  background: repeating-linear-gradient(
-    45deg,
-    #050094,
-    #050094 20px,
-    #050094 20px,
-    #050094 40px
-  );
+  background: repeating-linear-gradient(45deg,
+      #050094,
+      #050094 20px,
+      #050094 20px,
+      #050094 40px);
 }
 
 .footer-container {

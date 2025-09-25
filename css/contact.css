@@ -270,3 +270,16 @@ main h4 {
 .footer-bottom a {
   color: #eaf4ff;
 }
+
+.fa {
+  size: 10px;
+  padding: 10px;
+  font-size: 30px;
+  width: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}

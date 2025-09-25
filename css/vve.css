@@ -319,3 +319,16 @@
   .dot.active {
     background-color: #717171;
   }
+  
+  .fa {
+    size: 10px;
+    padding: 10px;
+    font-size: 30px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }

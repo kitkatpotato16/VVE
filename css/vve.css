@@ -25,15 +25,14 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 5px 20px;
-  /* kleiner gemaakt */
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+/* Blauwe lijn header */
 .navbar2 {
   max-width: 1200px;
-  width: 70%;
+  width: 0%;
   margin: 0 auto;
-  /* kleiner gemaakt */
   background-color: #7098ff9c;
   color: white;
 }
@@ -41,7 +40,6 @@ body {
 
 .navbar-left .logo {
   height: 80px;
-  /* kleiner gemaakt */
   width: auto;
 
 }

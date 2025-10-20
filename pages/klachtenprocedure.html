@@ -57,11 +57,34 @@
 
   <selection>
     <div class="mid_bar">
-      <div class="mid_column wie-zijn-wij">
+      <div class="mid_column wie-zijn-wij dienstverlening-container">
         <div>
           <h1>Klachtenprocedure formulier</h1>
           <br>
-          <p>Hier volgt een formulier</p>
+          <p>Formulier werkt nog niet.</p>
+          <div class="formcarry-container">
+            <form action="#" method="POST" class="formcarry-form">
+              <label for="name">Voornaam</label>
+              <input type="text" id="name" name="fullName" required />
+
+              <label for="name">Achternaam</label>
+              <input type="text" id="name" name="fullName" required />
+
+              <label for="tel">Telefoon num.</label>
+              <input type="tel" id="tel" name="nummer" required />
+        
+              <label for="email">Email adres</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="checkbox">Lid van VvE?</label>
+              <input type="checkbox" id="checkbox" name="checkbox"/>
+        
+              <label for="message">Je klacht/ bericht</label>
+              <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        
+              <button type="submit">Send</button>
+            </form>
+          </div>
         </div>
 
       </div>

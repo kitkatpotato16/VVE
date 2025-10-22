@@ -1,0 +1,208 @@
+/* Algemene instellingen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('../Images/cookieverk.png');
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Navigatiebalk */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    /* kleiner gemaakt */
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar-left .logo {
+    height: 80px;
+    /* kleiner gemaakt */
+    width: auto;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #4b00e0;
+}
+
+/* Hero-sectie */
+.hero-section {
+    text-align: center;
+    padding: 0px 0px;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.mid_bar {
+    background-color: #7099ff;
+    color: #eaf4ff;
+    padding: 40px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.mid_column {
+    margin: 0 auto;
+}
+
+.wie-zijn-wij {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 0px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Dienstverlening sectie */
+.dienstverlening {
+    background-color: white;
+    color: #002f3c;
+    padding: 60px 20px 100px 20px;
+    margin-top: 300px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.dienstverlening-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.dienstverlening-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.dienstverlening-tekst {
+    flex: 1;
+    min-width: 300px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dienstverlening-afbeelding {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    border-radius: 12px;
+}
+
+.dienstverlening-afbeelding img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.footer {
+    background-color: #050094;
+    /* donkerblauw */
+    color: #eaf4ff;
+    /* zacht lichtblauw */
+    padding: 40px 20px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-top-border {
+    height: 20px;
+    background: repeating-linear-gradient(45deg,
+            #050094,
+            #050094 20px,
+            #050094 20px,
+            #050094 40px);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.footer-column {
+    flex: 1 1 250px;
+    margin: 20px;
+}
+
+.footer-column h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #eaf4ff;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 140px;
+    margin-top: 15px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #eaf4ff33;
+}
+
+.footer-bottom a {
+    color: #eaf4ff;
+}
+
+.fa {
+    size: 10px;
+    padding: 10px;
+    font-size: 30px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}

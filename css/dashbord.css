@@ -125,6 +125,22 @@ body {
     border-radius: 12px;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #7099ff;
+    padding: 10px;
+  }
+
+.container div {
+    border-radius: 30px;
+    background-color: #7099ff;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+  }
+
 .footer {
     background-color: #050094;
     /* donkerblauw */

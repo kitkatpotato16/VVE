@@ -1,0 +1,38 @@
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.maand {
+    padding: 70px 25px;
+    width: 100%;
+    background: #587dd9;
+    text-align: center;
+}
+
+.maand ul {
+    margin: 0%;
+    padding: 0%;
+}
+
+.maand ul li {
+    color: #7099ff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.maand .prev {
+    float: right;
+    padding-top: 10px;
+}
+
+.dagen {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #4b00e0;
+
+}

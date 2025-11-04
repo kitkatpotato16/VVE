@@ -26,6 +26,7 @@
     </nav>
     <div id="login-status" style="color: white; padding: 10px;"></div>
 
+
     <script>
         fetch('php/check_login.php')
             .then(response => response.json())
@@ -45,6 +46,38 @@
                 <h1>Agenda</h1>
             </div>
         </div>
+
+        <div class="maand">
+            <ul>
+                <li class="prev">&#10094;</li>
+                <li class="next">&#10095;</li>
+                <li>November <br><span style="font-size:18px">2025</span></li>
+            </ul>
+        </div>
+        <ul class="dagen">
+            <li>maandag</li>
+            <li>dinsdag</li>
+            <li>woensdag</li>
+            <li>donderdag</li>
+            <li>vrijdag</li>
+            <li>zaterdag</li>
+            <li>zondag</li>
+        </ul>
+
+        <ul class="dag">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li><span class="active">10</span></li>
+            <li>11</li>
+            ...etc
+        </ul>
     </selection>
 
     <footer class="footer">

@@ -36,3 +36,10 @@ body {
     background-color: #4b00e0;
 
 }
+
+.dagen li {
+    display: inline-block;
+    width: 13.6%;
+    color: #7099ff;
+    text-align: center;
+}

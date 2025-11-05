@@ -12,11 +12,10 @@ body {
 
 .maand {
     padding: 25px 25px 25px 25px;
-    width: 50%;
+    margin-left: 8%;
+    margin-right: 8%;
     background: #587dd9;
     text-align: center;
-    display: grid;
-    grid-template-columns: auto, auto, auto;
 }
 
 .maand ul {
@@ -42,7 +41,8 @@ body {
 }
 
 .dagen {
-    margin: 0;
+    margin-left: 8%;
+    margin-right: 8%;
     padding: 10px 0;
     background-color: #4b00e0;
 
@@ -58,7 +58,8 @@ body {
 .dag {
     padding: 10px 0;
     background-color: #4b00e0;
-    margin: 0;
+    margin-left: 8%;
+    margin-right: 8%;
 }
 
 .dag li {

@@ -6,6 +6,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.mid_bar {
+    text-align: start;
+}
+
 .maand {
     padding: 70px 25px;
     width: 70%;

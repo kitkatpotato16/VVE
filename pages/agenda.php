@@ -1,3 +1,3 @@
 <?php
-print_r(cal_info(0));
+    print_r(getdate());
 ?>

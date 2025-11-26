@@ -1,14 +1,27 @@
+<?php
+session_start();
+
+// Controleer of gebruiker is ingelogd
+if (!isset($_SESSION["user_id"])) {
+    // Niet ingelogd → doorsturen naar login
+    header("Location: login.html");
+    exit;
+}
+
+// Haal gebruikersgegevens op
+$username = $_SESSION["username"];
+$email    = $_SESSION["email"];
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashbord</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="../css/dashbord.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
     <!-- Navigatiebalk -->
     <nav class="navbar">
@@ -20,45 +33,66 @@
             <li><a href="vve.html">VvE</a></li>
             <li><a href="overOns.html">Over ons</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="dashboard.html">Dashbord</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.php">Dashboard</a></li>
+            <li><a href="../php/logout.php">Uitloggen</a></li>
         </ul>
     </nav>
-    <div id="login-status" style="color: white; padding: 10px;"></div>
 
-    <script>
-        fetch('php/check_login.php')
-            .then(response => response.json())
-            .then(data => {
-                const loginDiv = document.getElementById('login-status');
-                if (data.loggedin) {
-                    loginDiv.textContent = `✅ Ingelogd als ${data.email}`;
-                } else {
-                    loginDiv.textContent = `🔒 Niet ingelogd`;
-                }
-            });
-    </script>
+    <div style="color:white; padding:10px;">
+        ✅ Ingelogd als <strong><?php echo htmlspecialchars($username); ?></strong> (<?php echo htmlspecialchars($email); ?>)
+    </div>
 
-    <selection>
+    <section>
         <div class="mid_bar">
             <div>
-                <h1>Documenten</h1>
+                <h1>Dashboard</h1>
             </div>
         </div>
-    </selection>
+    </section>
+
+    <section>
+        <div class="container">
+            <a href="gegevens.html">
+                <button>
+                    <img src="../Images//Icons/Gegevens.png">
+                    <h3>Mijn gegevens</h3>
+                </button>
+            </a>
+            <a href="meldingen.html">
+                <button>
+                    <img src="../Images//Icons/Meldingen.png">
+                    <h3>Meldingen</h3>
+                </button>
+            </a>
+            <a href="mededelingen.html">
+                <button>
+                    <img src="../Images//Icons/Mededelingen.png">
+                    <h3>Mededelingen</h3>
+                </button>
+            </a>
+            <a href="documenten.html">
+                <button>
+                    <img src="../Images//Icons/Documenten.png">
+                    <h3>Documenten</h3>
+                </button>
+            </a>
+            <a href="financien.html">
+                <button>
+                    <img src="../Images//Icons/Agenda.png">
+                    <h3>Financiën</h3>
+                </button>
+            </a>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="footer-top-border"></div>
-
         <div class="footer-container">
-            <!-- Linkerkolom: Naam en logo -->
             <div class="footer-column logo-col">
                 <h2>VvE Diensten Limburg</h2>
                 <p>VvE beheer</p>
                 <img src="../Images/Logo_wit.png" alt="VvE Logo" class="footer-logo" />
             </div>
-
-            <!-- Middenkolom: Adres en contact -->
             <div class="footer-column contact-col">
                 <strong>VvE Diensten Limburg</strong><br />
                 Einighauserweg 19<br />
@@ -68,21 +102,19 @@
                 info@vvedienstenlimburg.nl<br><br>
                 <a href="https://www.facebook.com/profile.php?id=61581407607665" class="fa fa-facebook"></a>
                 <a href="https://www.instagram.com/vvedienstenlimburg/" class="fa fa-instagram"></a>
-                <a href="https://nl.linkedin.com/in/vve-limburg-92a6b6386?trk=people-guest_people_search-card"
-                    class="fa fa-linkedin"></a>
+                <a href="https://nl.linkedin.com/in/vve-limburg-92a6b6386?trk=people-guest_people_search-card" class="fa fa-linkedin"></a>
             </div>
-
-            <!-- Rechterkolom: Links en certificering -->
             <div class="footer-column links-col">
                 <a href="../Images/3. Algemene voorwaarden VvE Diensten Limburg.pdf">Algemene voorwaarden</a><br />
                 <a href="#">BVVB Dienstenwijzer</a><br />
                 <a href="klachtenprocedure.html">Klachtenprocedure</a><br />
             </div>
         </div>
-
         <div class="footer-bottom">
             <p>&copy; 2025 VvE Diensten Limburg</p>
-            <p><a href="cookieverklaring.html">Cookieverklaring</a> | <a
-                    href="privacyverklaring.html">Privacyverklaring</a></p>
+            <p><a href="cookieverklaring.html">Cookieverklaring</a> | <a href="privacyverklaring.html">Privacyverklaring</a></p>
         </div>
     </footer>
+
+</body>
+</html>

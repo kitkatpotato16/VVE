@@ -1,5 +1,5 @@
 <?php
-session_start();
+/*session_start();
 require 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -23,5 +23,43 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: login.html?error=verkeerd");
         exit;
     }
+}*/
+
+session_start();
+require 'config.php';
+
+header('Content-Type: application/json');
+
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    echo json_encode(["success" => false, "message" => "Ongeldige aanvraag."]);
+    exit;
+}
+
+$email    = trim($_POST["email"] ?? '');
+$password = trim($_POST["password"] ?? '');
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo json_encode(["success" => false, "message" => "Ongeldig e-mailadres."]);
+    exit;
+}
+
+// Gebruiker zoeken
+$stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+$stmt->execute([$email]);
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if ($user && password_verify($password, $user["password"])) {
+
+    // Sessie vullen
+    $_SESSION["user_id"]   = $user["id"];
+    $_SESSION["username"]  = $user["username"];
+    $_SESSION["email"]     = $user["email"];
+
+    echo json_encode(["success" => true]);
+    exit;
+
+} else {
+    echo json_encode(["success" => false, "message" => "E-mail of wachtwoord klopt niet."]);
+    exit;
 }
 ?>

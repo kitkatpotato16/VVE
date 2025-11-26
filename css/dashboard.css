@@ -73,6 +73,15 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.inlog_txt {
+    background-color: #7099ff;
+    color: #eaf4ff;
+    padding-left: 8%;
+    padding-bottom: 1%;
+    padding-top: 2%;
+    font-family: Arial, sans-serif;
+}
+
 .mid_column {
     margin: 0 auto;
 }

@@ -4,7 +4,7 @@ session_start();
 // Controleer of gebruiker is ingelogd
 if (!isset($_SESSION["user_id"])) {
     // Niet ingelogd → doorsturen naar login
-    header("Location: login.html");
+    header("Location: login.php");
     exit;
 }
 
@@ -29,10 +29,10 @@ $email    = $_SESSION["email"];
             <img src="../Images/Logo_wit.png" alt="Logo" class="logo" />
         </div>
         <ul class="navbar-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="vve.html">VvE</a></li>
-            <li><a href="overOns.html">Over ons</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="vve.php">VvE</a></li>
+            <li><a href="overOns.php">Over ons</a></li>
+            <li><a href="contact.php">Contact</a></li>
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="../php/logout.php">Uitloggen</a></li>
         </ul>

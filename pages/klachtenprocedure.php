@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Privacyverklaring</title>
+  <link rel="stylesheet" href="../css/klachtenprocudure.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -16,11 +16,11 @@
       <img src="../Images/Logo_wit.png" alt="Logo" class="logo" />
     </div>
     <ul class="navbar-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="vve.html">VvE</a></li>
-      <li><a href="overOns.html">Over ons</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="login.html">Login</a></li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="vve.php">VvE</a></li>
+      <li><a href="overOns.php">Over ons</a></li>
+      <li><a href="contact.php">Contact</a></li>
+      <li><a href="login.php">Login</a></li>
     </ul>
   </nav>
   <div id="login-status" style="color: white; padding: 10px;"></div>
@@ -38,48 +38,59 @@
       });
   </script>
 
-  <!-- Hero Sectie -->
-  <section class="hero-section">
-    <h1><b>VvE Diensten Limburg ...ontzorgt</b> </h1>
-    <p>VvE dienstverlening financiële-en beheerdienstverlening</p>
-    <div class="mouse">
-      <div class="roll"></div>
-      <div class="rollshadow"></div>
-    </div>
-  </section>
-
   <!-- Dienstverlening Sectie -->
   <section class="dienstverlening">
-    <div class="dienstverlening-container">
+    <div class="dienstverlening-container wie-zijn-wij">
       <div class="dienstverlening-content">
 
         <!-- Tekstkolom -->
         <div class="dienstverlening-tekst">
-          <h2>Onze Dienstverlening</h2><br>
           <p>
-            Wij zijn al jaren actief in diverse takken van de financiële-en beheerdienstverlening.
-            In de loop der jaren steeg de vraag naar VvE-diensten. En sinds enige tijd zijn wij ons hierin gaan
-            specialiseren.
-            Onze handelswijze (informeel, korte lijnen, altijd direct en hetzelfde aanspreekpunt.) wordt door onze
-            relaties
-            zeer gewaardeerd.
-            Daardoor groeide ook de vraag naar onze diensten. <br><br>
+          <h2>Klacht indienen</h2>
+          Heeft u een klacht over onze organisatie, dan kunt u dat via het onderstaande formulier bij ons melden. Uw
+          klacht wordt dan via onze procedure in behandeling genomen.
           </p>
-          <p>
-            Onze werkzaamheden betreffen dienstverlening inzake particulier
-            onroerend goed (VvE), maar ook zakelijke panden zoals loodsen en kantoren. We zijn dus allround actief.
-            De focus ligt hierbij op ontzorging: wij regelen het beheer van de VvE en - indien nodig - ook het bestuur.
-          </p>
-        </div>
-
-        <!-- Afbeeldingkolom -->
-        <div class="dienstverlening-afbeelding">
-          <img src="../Images/vergadering.png" alt="Vergadering VvE" />
         </div>
 
       </div>
     </div>
   </section>
+
+  <selection>
+    <div class="mid_bar">
+      <div class="mid_column wie-zijn-wij dienstverlening-container">
+        <div>
+          <h1>Klachtenprocedure formulier</h1>
+          <br>
+          <p>Formulier werkt nog niet.</p>
+          <div class="formcarry-container">
+            <form action="#" method="POST" class="formcarry-form">
+              <label for="name">Voornaam</label>
+              <input type="text" id="name" name="fullName" required />
+
+              <label for="name">Achternaam</label>
+              <input type="text" id="name" name="fullName" required />
+
+              <label for="tel">Telefoon num.</label>
+              <input type="tel" id="tel" name="nummer" required />
+
+              <label for="email">Email adres</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="checkbox">Lid van VvE?</label>
+              <input type="checkbox" id="checkbox" name="checkbox" />
+
+              <label for="message">Je klacht/ bericht</label>
+              <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </selection>
 
   <footer class="footer">
     <div class="footer-top-border"></div>
@@ -110,13 +121,13 @@
       <div class="footer-column links-col">
         <a href="../Images/3. Algemene voorwaarden VvE Diensten Limburg.pdf">Algemene voorwaarden</a><br />
         <a href="#">BVVB Dienstenwijzer</a><br />
-        <a href="klachtenprocedure.html">Klachtenprocedure</a><br />
+        <a href="klachtenprocedure.php">Klachtenprocedure</a><br />
       </div>
     </div>
 
     <div class="footer-bottom">
       <p>&copy; 2025 VvE Diensten Limburg</p>
-      <p><a href="cookieverklaring.html">Cookieverklaring</a> | <a href="privacyverklaring.html">Privacyverklaring</a>
+      <p><a href="cookieverklaring.php">Cookieverklaring</a> | <a href="privacyverklaring.php">Privacyverklaring</a>
       </p>
     </div>
   </footer>

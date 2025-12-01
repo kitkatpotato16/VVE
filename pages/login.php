@@ -14,12 +14,12 @@
       <img src="../Images/Logo_wit.png" alt="Logo" class="logo" />
     </div>
     <ul class="navbar-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="vve.html">VvE</a></li>
-      <li><a href="overOns.html">Over ons</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="dashboard.html">Dashboard</a></li>
-      <li><a href="login.html">Login</a></li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="vve.php">VvE</a></li>
+      <li><a href="overOns.php">Over ons</a></li>
+      <li><a href="contact.php">Contact</a></li>
+      <li><a href="dashboard.php">Dashboard</a></li>
+      <li><a href="login.php">Login</a></li>
     </ul>
   </nav>
 
@@ -36,11 +36,11 @@
       <div id="error" style="display:none; color:red; margin-top:10px;"></div>
 
       <p class="register-link">
-        Heb je geen account? <a href="register.html">Registreer hier</a>
+        Heb je geen account? <a href="register.php">Registreer hier</a>
       </p>
 
       <div class="back-button">
-        <a href="index.html">← Terug naar home</a>
+        <a href="index.php">← Terug naar home</a>
       </div>
     </form>
   </div>
@@ -65,7 +65,7 @@
 
         if (result.success) {
           // Redirect naar dashboard
-          window.location.href = "../php/dashboard.html";
+          window.location.href = "../php/dashboard.php";
         } else {
           errorDiv.textContent = result.message;
           errorDiv.style.display = "block";

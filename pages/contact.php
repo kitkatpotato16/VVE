@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacyverklaring</title>
-  <link rel="stylesheet" href="../css/klachtenprocudure.css">
+  <title>Contact</title>
+  <link rel="stylesheet" href="../css/contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -16,11 +16,11 @@
       <img src="../Images/Logo_wit.png" alt="Logo" class="logo" />
     </div>
     <ul class="navbar-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="vve.html">VvE</a></li>
-      <li><a href="overOns.html">Over ons</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="login.html">Login</a></li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="vve.php">VvE</a></li>
+      <li><a href="overOns.php">Over ons</a></li>
+      <li><a href="contact.php">Contact</a></li>
+      <li><a href="login.php">Login</a></li>
     </ul>
   </nav>
   <div id="login-status" style="color: white; padding: 10px;"></div>
@@ -38,59 +38,44 @@
       });
   </script>
 
+  <!-- Hero Sectie -->
+  <section class="hero-section">
+    <h1>Neem contact met ons op</h1>
+    <div class="mouse">
+      <div class="roll"></div>
+      <div class="rollshadow"></div>
+    </div>
+  </section>
+
   <!-- Dienstverlening Sectie -->
   <section class="dienstverlening">
-    <div class="dienstverlening-container wie-zijn-wij">
+    <div class="dienstverlening-container">
       <div class="dienstverlening-content">
 
         <!-- Tekstkolom -->
         <div class="dienstverlening-tekst">
+          <h2>Contact</h2><br>
           <p>
-          <h2>Klacht indienen</h2>
-          Heeft u een klacht over onze organisatie, dan kunt u dat via het onderstaande formulier bij ons melden. Uw
-          klacht wordt dan via onze procedure in behandeling genomen.
+            Bent u op zoek naar een professional met uitstekende service?<br> Neem dan gerust contact op met Peter Dost
+            via
+            telefoonnummer: <br><strong>06 41 643 770</strong>.
+            <br><br>
           </p>
+          <p>
+            Of mail eens. We maken graag een afspraak om ons voor te stellen en met u mee te denken.
+            U kunt ons bereiken via: <br>
+            <strong><a href="mailto:Info@vvedienstenlimburg.nl">info@vvedienstenlimburg.nl</a></strong>
+          </p>
+        </div>
+
+        <!-- Afbeeldingkolom -->
+        <div class="dienstverlening-afbeelding">
+          <img src="../Images/Contact_ons.jpg" alt="Vergadering VvE" />
         </div>
 
       </div>
     </div>
   </section>
-
-  <selection>
-    <div class="mid_bar">
-      <div class="mid_column wie-zijn-wij dienstverlening-container">
-        <div>
-          <h1>Klachtenprocedure formulier</h1>
-          <br>
-          <p>Formulier werkt nog niet.</p>
-          <div class="formcarry-container">
-            <form action="#" method="POST" class="formcarry-form">
-              <label for="name">Voornaam</label>
-              <input type="text" id="name" name="fullName" required />
-
-              <label for="name">Achternaam</label>
-              <input type="text" id="name" name="fullName" required />
-
-              <label for="tel">Telefoon num.</label>
-              <input type="tel" id="tel" name="nummer" required />
-
-              <label for="email">Email adres</label>
-              <input type="email" id="email" name="email" required />
-
-              <label for="checkbox">Lid van VvE?</label>
-              <input type="checkbox" id="checkbox" name="checkbox" />
-
-              <label for="message">Je klacht/ bericht</label>
-              <textarea name="message" id="message" cols="30" rows="10"></textarea>
-
-              <button type="submit">Send</button>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </selection>
 
   <footer class="footer">
     <div class="footer-top-border"></div>
@@ -98,7 +83,7 @@
     <div class="footer-container">
       <!-- Linkerkolom: Naam en logo -->
       <div class="footer-column logo-col">
-        <h2>VvE Diensten Limburg </h2>
+        <h2>VvE Diensten Limburg</h2>
         <p>VvE beheer</p>
         <img src="../Images/Logo_wit.png" alt="VvE Logo" class="footer-logo" />
       </div>
@@ -121,13 +106,13 @@
       <div class="footer-column links-col">
         <a href="../Images/3. Algemene voorwaarden VvE Diensten Limburg.pdf">Algemene voorwaarden</a><br />
         <a href="#">BVVB Dienstenwijzer</a><br />
-        <a href="klachtenprocedure.html">Klachtenprocedure</a><br />
+        <a href="klachtenprocedure.php">Klachtenprocedure</a><br />
       </div>
     </div>
 
     <div class="footer-bottom">
       <p>&copy; 2025 VvE Diensten Limburg</p>
-      <p><a href="cookieverklaring.html">Cookieverklaring</a> | <a href="privacyverklaring.html">Privacyverklaring</a>
+      <p><a href="cookieverklaring.php">Cookieverklaring</a> | <a href="privacyverklaring.php">Privacyverklaring</a>
       </p>
     </div>
   </footer>

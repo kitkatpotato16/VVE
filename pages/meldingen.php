@@ -5,9 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashbord</title>
-    <link rel="stylesheet" href="../css/dashbord.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/financien.css">
 </head>
 
 <body>
@@ -21,12 +20,11 @@
             <li><a href="vve.html">VvE</a></li>
             <li><a href="overOns.html">Over ons</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="dashboard.html">Dashbord</a></li>
+            <li><a href="dashboard.php">Dashbord</a></li>
             <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
     <div id="login-status" style="color: white; padding: 10px;"></div>
-
 
     <script>
         fetch('php/check_login.php')
@@ -44,10 +42,22 @@
     <selection>
         <div class="mid_bar">
             <div>
-                <h1>financien</h1>
+                <h1>Meldingen</h1>
             </div>
         </div>
+    </selection>
 
+    <selection>
+        <div class="meldingen">
+            <h4>Melding soort:</h4> <h4>Datum:</h4> <p>Melding</p>
+        </div>
+        <div class="meldingen">
+            <h4>Melding soort:</h4> <h4>Datum:</h4> <p>Melding</p>
+        </div>
+        <div class="meldingen">
+            <h4>Melding soort:</h4> <h4>Datum:</h4> <p>Melding</p>
+        </div> 
+        <br><br><br><br>
     </selection>
 
     <footer class="footer">
@@ -79,13 +89,13 @@
             <div class="footer-column links-col">
                 <a href="../Images/3. Algemene voorwaarden VvE Diensten Limburg.pdf">Algemene voorwaarden</a><br />
                 <a href="#">BVVB Dienstenwijzer</a><br />
-                <a href="klachtenprocedure.html">Klachtenprocedure</a><br />
+                <a href="klachtenprocedure.php">Klachtenprocedure</a><br />
             </div>
         </div>
 
         <div class="footer-bottom">
             <p>&copy; 2025 VvE Diensten Limburg</p>
-            <p><a href="cookieverklaring.html">Cookieverklaring</a> | <a
-                    href="privacyverklaring.html">Privacyverklaring</a></p>
+            <p><a href="cookieverklaring.php">Cookieverklaring</a> | <a
+                    href="privacyverklaring.php">Privacyverklaring</a></p>
         </div>
     </footer>

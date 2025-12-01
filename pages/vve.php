@@ -16,11 +16,11 @@
       <img src="../Images/Logo_wit.png" alt="Logo" class="logo" />
     </div>
     <ul class="navbar-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="vve.html">VvE</a></li>
-      <li><a href="overOns.html">Over ons</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="login.html">Login</a></li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="vve.php">VvE</a></li>
+      <li><a href="overOns.php">Over ons</a></li>
+      <li><a href="contact.php">Contact</a></li>
+      <li><a href="login.php">Login</a></li>
     </ul>
   </nav>
   <div id="login-status" style="color: white; padding: 10px;"></div>
@@ -101,13 +101,13 @@
         <div class="footer-column links-col">
           <a href="../Images/3. Algemene voorwaarden VvE Diensten Limburg.pdf">Algemene voorwaarden</a><br />
           <a href="#">BVVB Dienstenwijzer</a><br />
-          <a href="klachtenprocedure.html">Klachtenprocedure</a><br />
+          <a href="klachtenprocedure.php">Klachtenprocedure</a><br />
         </div>
       </div>
 
       <div class="footer-bottom">
         <p>&copy; 2025 VvE Diensten Limburg</p>
-        <p><a href="cookieverklaring.html">Cookieverklaring</a> | <a href="privacyverklaring.html">Privacyverklaring</a>
+        <p><a href="cookieverklaring.php">Cookieverklaring</a> | <a href="privacyverklaring.php">Privacyverklaring</a>
         </p>
       </div>
     </footer>

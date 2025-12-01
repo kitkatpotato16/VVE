@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashbord</title>
-    <link rel="stylesheet" href="../css/dashbord.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -20,7 +20,7 @@
             <li><a href="vve.html">VvE</a></li>
             <li><a href="overOns.html">Over ons</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="dashboard.html">Dashbord</a></li>
+            <li><a href="dashboard.php">Dashbord</a></li>
             <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
@@ -42,8 +42,17 @@
     <selection>
         <div class="mid_bar">
             <div>
-                <h1>Documenten</h1>
+                <h1>Mijn gegevens</h1>
             </div>
+        </div>
+    </selection>
+
+    <selection>
+        <div class="gegevens">
+            <h3>Naam:</h3> <h3>Test</h3> <a href="#">Naam wijzigen</a>
+            <h3>Wachtwoord:</h3> <h3>######</h3> <a href="#">Wachtwoord wijzigen</a>
+            <h3>Email:</h3> <h3>info@vvedienstenlimburg.nl</h3> <a href="#">Email wijzigen</a>
+            <h3>Appartement nummer:</h3> <h3>Appartement nummer:</h3> <a href="#">Appartement wijzigen</a>
         </div>
     </selection>
 
@@ -76,13 +85,13 @@
             <div class="footer-column links-col">
                 <a href="../Images/3. Algemene voorwaarden VvE Diensten Limburg.pdf">Algemene voorwaarden</a><br />
                 <a href="#">BVVB Dienstenwijzer</a><br />
-                <a href="klachtenprocedure.html">Klachtenprocedure</a><br />
+                <a href="klachtenprocedure.php">Klachtenprocedure</a><br />
             </div>
         </div>
 
         <div class="footer-bottom">
             <p>&copy; 2025 VvE Diensten Limburg</p>
-            <p><a href="cookieverklaring.html">Cookieverklaring</a> | <a
-                    href="privacyverklaring.html">Privacyverklaring</a></p>
+            <p><a href="cookieverklaring.php">Cookieverklaring</a> | <a
+                    href="privacyverklaring.php">Privacyverklaring</a></p>
         </div>
     </footer>

@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact</title>
-  <link rel="stylesheet" href="../css/contact.css">
+  <title>Privacyverklaring</title>
+  <link rel="stylesheet" href="../css/cookieverk.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -16,11 +16,11 @@
       <img src="../Images/Logo_wit.png" alt="Logo" class="logo" />
     </div>
     <ul class="navbar-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="vve.html">VvE</a></li>
-      <li><a href="overOns.html">Over ons</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="login.html">Login</a></li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="vve.php">VvE</a></li>
+      <li><a href="overOns.php">Over ons</a></li>
+      <li><a href="contact.php">Contact</a></li>
+      <li><a href="login.php">Login</a></li>
     </ul>
   </nav>
   <div id="login-status" style="color: white; padding: 10px;"></div>
@@ -38,15 +38,6 @@
       });
   </script>
 
-  <!-- Hero Sectie -->
-  <section class="hero-section">
-    <h1>Neem contact met ons op</h1>
-    <div class="mouse">
-      <div class="roll"></div>
-      <div class="rollshadow"></div>
-    </div>
-  </section>
-
   <!-- Dienstverlening Sectie -->
   <section class="dienstverlening">
     <div class="dienstverlening-container">
@@ -54,23 +45,27 @@
 
         <!-- Tekstkolom -->
         <div class="dienstverlening-tekst">
-          <h2>Contact</h2><br>
+          <h1>Cookieverklaring</h1><br>
           <p>
-            Bent u op zoek naar een professional met uitstekende service?<br> Neem dan gerust contact op met Peter Dost
-            via
-            telefoonnummer: <br><strong>06 41 643 770</strong>.
-            <br><br>
+          <h2>Wat is een cookieverklaring?</h2>
+          Cookies zijn kleine tekstbestandjes die een website opslaat op je computer, telefoon of tablet wanneer je
+          die bezoekt.
+          Ze bevatten informatie die later weer kan worden uitgelezen door de website of door derde partijen.
+          <br>
+          <br>
+          <h2>Wat doen cookies?</h2>
+          Onthouden van voorkeuren: zoals taalinstellingen of inloggegevens.
+          Volgen van gebruik: meten hoe vaak je een website bezoekt en welke pagina je bekijkt (bijv. met Google
+          Analytics).
+          Personaliseren van inhoud: zorgen dat je bijvoorbeeld relevante advertenties ziet.
+          Technisch noodzakelijk: laten de website goed werken,
+          zoals bij het invullen van formulieren of het onthouden van producten in een winkelmandje.
+          <br>
+          <br>
+          <h2>Welke cookies gebruiken wij?</h2>
+          Functionele cookies: Deze cookies zijn noodzakelijk om de website goed te laten werken.
+          Ze onthouden bijvoorbeeld uw voorkeuren of zorgen dat de pagina correct worden weergeven.
           </p>
-          <p>
-            Of mail eens. We maken graag een afspraak om ons voor te stellen en met u mee te denken.
-            U kunt ons bereiken via: <br>
-            <strong><a href="mailto:Info@vvedienstenlimburg.nl">info@vvedienstenlimburg.nl</a></strong>
-          </p>
-        </div>
-
-        <!-- Afbeeldingkolom -->
-        <div class="dienstverlening-afbeelding">
-          <img src="../Images/Contact_ons.jpg" alt="Vergadering VvE" />
         </div>
 
       </div>
@@ -83,7 +78,7 @@
     <div class="footer-container">
       <!-- Linkerkolom: Naam en logo -->
       <div class="footer-column logo-col">
-        <h2>VvE Diensten Limburg</h2>
+        <h2>VvE Diensten Limburg </h2>
         <p>VvE beheer</p>
         <img src="../Images/Logo_wit.png" alt="VvE Logo" class="footer-logo" />
       </div>
@@ -95,24 +90,20 @@
         6143 BN Guttecoven<br /><br />
         06 41 643 770
         <br>
-        info@vvedienstenlimburg.nl<br><br>
-        <a href="https://www.facebook.com/profile.php?id=61581407607665" class="fa fa-facebook"></a>
-        <a href="https://www.instagram.com/vvedienstenlimburg/" class="fa fa-instagram"></a>
-        <a href="https://nl.linkedin.com/in/vve-limburg-92a6b6386?trk=people-guest_people_search-card"
-          class="fa fa-linkedin"></a>
+        info@vvedienstenlimburg.nl
       </div>
 
       <!-- Rechterkolom: Links en certificering -->
       <div class="footer-column links-col">
         <a href="../Images/3. Algemene voorwaarden VvE Diensten Limburg.pdf">Algemene voorwaarden</a><br />
         <a href="#">BVVB Dienstenwijzer</a><br />
-        <a href="klachtenprocedure.html">Klachtenprocedure</a><br />
+        <a href="klachtenprocedure.php">Klachtenprocedure</a><br />
       </div>
     </div>
 
     <div class="footer-bottom">
       <p>&copy; 2025 VvE Diensten Limburg</p>
-      <p><a href="cookieverklaring.html">Cookieverklaring</a> | <a href="privacyverklaring.html">Privacyverklaring</a>
+      <p><a href="cookieverklaring.php">Cookieverklaring</a> | <a href="privacyverklaring.php">Privacyverklaring</a>
       </p>
     </div>
   </footer>

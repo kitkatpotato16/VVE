@@ -15,11 +15,11 @@
       <img src="../Images/Logo_wit.png" alt="Logo" class="logo" />
     </div>
     <ul class="navbar-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="vve.html">VvE</a></li>
-      <li><a href="overOns.html">Over ons</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="login.html">Login</a></li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="vve.php">VvE</a></li>
+      <li><a href="overOns.php">Over ons</a></li>
+      <li><a href="contact.php">Contact</a></li>
+      <li><a href="login.php">Login</a></li>
     </ul>
   </nav>
 
@@ -69,7 +69,7 @@
       });
     </script>
     <div class="back-button">
-      <a href="login.html">← Terug naar login</a>
+      <a href="login.php">← Terug naar login</a>
     </div>
   </div>
 </body>

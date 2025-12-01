@@ -52,31 +52,31 @@ $email    = $_SESSION["email"];
 
     <section>
         <div class="container">
-            <a href="gegevens.html">
+            <a href="gegevens.php">
                 <button>
                     <img src="../Images//Icons/Gegevens.png">
                     <h3>Mijn gegevens</h3>
                 </button>
             </a>
-            <a href="meldingen.html">
+            <a href="meldingen.php">
                 <button>
                     <img src="../Images//Icons/Meldingen.png">
                     <h3>Meldingen</h3>
                 </button>
             </a>
-            <a href="mededelingen.html">
+            <a href="mededelingen.php">
                 <button>
                     <img src="../Images//Icons/Mededelingen.png">
                     <h3>Mededelingen</h3>
                 </button>
             </a>
-            <a href="documenten.html">
+            <a href="documenten.php">
                 <button>
                     <img src="../Images//Icons/Documenten.png">
                     <h3>Documenten</h3>
                 </button>
             </a>
-            <a href="financien.html">
+            <a href="financien.php">
                 <button>
                     <img src="../Images//Icons/Agenda.png">
                     <h3>Financiën</h3>
@@ -107,12 +107,12 @@ $email    = $_SESSION["email"];
             <div class="footer-column links-col">
                 <a href="../Images/3. Algemene voorwaarden VvE Diensten Limburg.pdf">Algemene voorwaarden</a><br />
                 <a href="#">BVVB Dienstenwijzer</a><br />
-                <a href="klachtenprocedure.html">Klachtenprocedure</a><br />
+                <a href="klachtenprocedure.php">Klachtenprocedure</a><br />
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 VvE Diensten Limburg</p>
-            <p><a href="cookieverklaring.html">Cookieverklaring</a> | <a href="privacyverklaring.html">Privacyverklaring</a></p>
+            <p><a href="cookieverklaring.php">Cookieverklaring</a> | <a href="privacyverklaring.php">Privacyverklaring</a></p>
         </div>
     </footer>
 

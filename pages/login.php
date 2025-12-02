@@ -65,7 +65,7 @@
 
         if (result.success) {
           // Redirect naar dashboard
-          window.location.href = "../php/dashboard.php";
+          window.location.href = "../pages/dashboard.php";
         } else {
           errorDiv.textContent = result.message;
           errorDiv.style.display = "block";

@@ -1,88 +1,60 @@
+<?php
+session_start();
+require "../php/config.php";
+
+if (!isset($_SESSION["user_id"])) {
+    header("Location: login.php");
+    exit;
+}
+
+$id = $_SESSION["user_id"];
+
+$stmt = $conn->prepare("SELECT * FROM documents WHERE user_id = ?");
+$stmt->execute([$id]);
+$docs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
-<html lang="nl">
-
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashbord</title>
+    <meta charset="UTF-8">
+    <title>Documenten</title>
     <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-    <!-- Navigatiebalk -->
-    <nav class="navbar">
-        <div class="navbar-left">
-            <img src="../Images/Logo_wit.png" alt="Logo" class="logo" />
-        </div>
-        <ul class="navbar-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="vve.html">VvE</a></li>
-            <li><a href="overOns.html">Over ons</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="dashboard.php">Dashbord</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
-    <div id="login-status" style="color: white; padding: 10px;"></div>
 
-    <script>
-        fetch('php/check_login.php')
-            .then(response => response.json())
-            .then(data => {
-                const loginDiv = document.getElementById('login-status');
-                if (data.loggedin) {
-                    loginDiv.textContent = `✅ Ingelogd als ${data.email}`;
-                } else {
-                    loginDiv.textContent = `🔒 Niet ingelogd`;
-                }
-            });
-    </script>
+<h2>Mijn documenten</h2>
 
-    <selection>
-        <div class="mid_bar">
-            <div>
-                <h1>Documenten</h1>
-            </div>
-        </div>
-    </selection>
+<?php if (isset($_GET["upload"]) && $_GET["upload"] === "success") : ?>
+    <p style="color:green;">PDF succesvol toegevoegd!</p>
+<?php endif; ?>
 
-    <footer class="footer">
-        <div class="footer-top-border"></div>
+<h3>PDF uploaden:</h3>
 
-        <div class="footer-container">
-            <!-- Linkerkolom: Naam en logo -->
-            <div class="footer-column logo-col">
-                <h2>VvE Diensten Limburg</h2>
-                <p>VvE beheer</p>
-                <img src="../Images/Logo_wit.png" alt="VvE Logo" class="footer-logo" />
-            </div>
+<form action="../php/pdf_upload.php" method="POST" enctype="multipart/form-data">
+    <input type="file" name="pdf" accept="application/pdf" required>
+    <button type="submit">Upload PDF</button>
+</form>
 
-            <!-- Middenkolom: Adres en contact -->
-            <div class="footer-column contact-col">
-                <strong>VvE Diensten Limburg</strong><br />
-                Einighauserweg 19<br />
-                6143 BN Guttecoven<br /><br />
-                06 41 643 770
-                <br>
-                info@vvedienstenlimburg.nl<br><br>
-                <a href="https://www.facebook.com/profile.php?id=61581407607665" class="fa fa-facebook"></a>
-                <a href="https://www.instagram.com/vvedienstenlimburg/" class="fa fa-instagram"></a>
-                <a href="https://nl.linkedin.com/in/vve-limburg-92a6b6386?trk=people-guest_people_search-card"
-                    class="fa fa-linkedin"></a>
-            </div>
+<br><hr><br>
 
-            <!-- Rechterkolom: Links en certificering -->
-            <div class="footer-column links-col">
-                <a href="../Images/3. Algemene voorwaarden VvE Diensten Limburg.pdf">Algemene voorwaarden</a><br />
-                <a href="#">BVVB Dienstenwijzer</a><br />
-                <a href="klachtenprocedure.php">Klachtenprocedure</a><br />
-            </div>
-        </div>
+<h3>Beschikbare documenten:</h3>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 VvE Diensten Limburg</p>
-            <p><a href="cookieverklaring.php">Cookieverklaring</a> | <a
-                    href="privacyverklaring.php">Privacyverklaring</a></p>
-        </div>
-    </footer>
+<?php if (count($docs) === 0): ?>
+    <p>Geen documenten gevonden.</p>
+<?php else: ?>
+    <ul>
+        <?php foreach ($docs as $d): ?>
+            <li>
+                <a href="../pdf/<?php echo $d['filename']; ?>" target="_blank">
+                    📄 <?php echo htmlspecialchars($d['original_name']); ?>
+                </a>
+                (<?php echo $d['uploaded_at']; ?>)
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
+<a href="dashboard.php">⬅ Terug naar dashboard</a>
+
+</body>
+</html>

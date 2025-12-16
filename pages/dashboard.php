@@ -106,7 +106,6 @@ $email    = $_SESSION["email"];
             </div>
             <div class="footer-column links-col">
                 <a href="../Images/3. Algemene voorwaarden VvE Diensten Limburg.pdf">Algemene voorwaarden</a><br />
-                <a href="#">BVVB Dienstenwijzer</a><br />
                 <a href="klachtenprocedure.php">Klachtenprocedure</a><br />
             </div>
         </div>
